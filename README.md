@@ -1,16 +1,19 @@
-# React + Vite
+# React Frontend Deployment w/ AWS S3 & Cloudfront
 
-This template provides a minimal setup to get React working in Vite with HMR and some Oxlint rules.
+## Overview
+This project demonstrates how to deploy a React app using Amazon S3 for static website hosting & Amazon Cloudfront for content display.
 
-Currently, two official plugins are available:
+### Steps Followed
+1. Create a React app
+2. Built the app for production using:
+npm run build
+3. Create an Amazon S3 bucket
+4. Uploaded the production build files to the S3 bucket
+5. Configured the bucket for static website hosting
+6. Created a Cloudfront distribution w/ the S3 bucket as the origin
+7. Waited for the distribution to deploy 
+8. Opened the Cloudfront URL to verify app loads successfully
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
-
-## React Compiler
-
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
-
-## Expanding the Oxlint configuration
-
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and Oxlint's TypeScript related rules in your project.
+#### Live App URL 
+Cloudfront URL :
+https://d3410rlog8qo13.cloudfront.net
